@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>fizzBuzz</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//vars
+		var fizz = "fizz";
+		var buzz = "buzz";
+		var fizzBuzz = "fizzbuzz";
+		var br = '<br />';
+		var i;
+
+		//loop through 100
+		for(i = 0; i<=100; i++){
+			//check to see if i and modulus 15 equal 0
+			if(i % 15 == 0){
+				document.write(fizzBuzz + br);	
+			}else if(i % 5 == 0){
+				document.write(buzz + br);
+			}else if(i % 3 == 0){
+				document.write(fizz + br);
+			}else{
+				document.write(i + br);
+			}
+		}
+	</script>
+
+</body>
+</html>
