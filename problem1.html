@@ -1,3 +1,8 @@
+<!-- Write a JavaScript program to display the current day and time in the following format. 
+
+Today is : Friday. 
+Current time is : 4 PM : 50 : 22  -->
+
 <!doctype html>
 <html>
 <head>
@@ -8,6 +13,7 @@
 
 	</div>
 	<script type="text/javascript">
+		//vars
 		var weekday = [];
 		weekday[0] = "Sunday";
 		weekday[1] = "Monday";
@@ -22,10 +28,16 @@
 		var hour = date.getHours();
 		var minutes = date.getMinutes();
 		var seconds = date.getSeconds();
-		
-		document.write("Today is " + weekday[day] + '<br /><br />');
-		document.write("The time is " + hour + ":"  + minutes + ":" + seconds);
 
+		//check to see if the hour is greater than or equal to 12
+		if(hour >= 12){
+		// if so, pm will be added	
+			document.write("The time is " + hour + "pm : "  + minutes + " : " + seconds + '<br />');
+		}else{
+		// am will be added	
+			document.write("The time is " + hour + "am : "  + minutes + " : " + seconds + '<br /><br />');
+		}
+		document.write("Today is " + weekday[day] + '<br /><br />');
 	</script>
 </body>
 </html>
